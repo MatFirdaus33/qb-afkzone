@@ -48,7 +48,7 @@ Citizen.CreateThread(function()
 				if(Vdist(x,y,z,v.x,v.y,v.z) <= v.radius) then
 					lokasi.tempat = true
 					lokasi.x,lokasi.y,lokasi.z,lokasi.radius = v.x,v.y,v.z,v.radius
-					ClearPlayerWantedLevel(PlayerId())
+					--ClearPlayerWantedLevel(PlayerId())
 					exports["Venice-Notification"]:Notify("Anda Masuk Zone", 5000, "check")
 					--exports['mythic_notify']:SendAlert('inform', 'Anda Masuk Zone Tidur')
 				end
