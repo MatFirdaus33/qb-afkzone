@@ -58,7 +58,7 @@ Citizen.CreateThread(function()
 			CurrentAction = nil
 			antiCollision()
 			DisableViolentActions()
-			DrawTxt(0.670, 1.430, 1.0,1.0,0.45,"~y~ZONE TIDUR", 255,255,255,255)
+			DrawTxt(1.150, 1.460, 1.0,1.0,0.50,"~r~AFK~r~ ~r~ZONE~r~", 255,255,255,255)
 			
 			
 			if(Vdist(x,y,z,lokasi.x,lokasi.y,lokasi.z) > besarradius) then
