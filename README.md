@@ -2,8 +2,9 @@
 
 if feel free u can pull requests to improve my code I really appreciate it 
 
-idle resmon - 10.00ms 
-enter resmon - 13.0ms 14.0ms
+idle afkzone when not enter afk zone resmon - 2.00ms 
+enter afkzone resmon - 13.0ms 14.0ms
+
 
 ![image](https://github.com/MatFirdaus33/qb-afkzone/assets/113304580/95061c96-2d52-4057-9575-27872bf87ae2)
 
