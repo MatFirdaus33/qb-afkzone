@@ -74,34 +74,11 @@ end)
 
 function DisableViolentActions()
 	NetworkSetFriendlyFireOption(false)
-    SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
     DisablePlayerFiring(ped, true)
-    DisablePlayerFiring(player,true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
-    SetPlayerCanDoDriveBy(ped, false)
-    DisableControlAction(2, 37, true)
-    DisableControlAction(0, 106, true)
-    DisableControlAction(0, 24, true)
-    DisableControlAction(0, 69, true)
-    DisableControlAction(0, 70, true)
-    DisableControlAction(0, 92, true)
-    DisableControlAction(0, 45, true)
-    DisableControlAction(0, 80, true)
-    DisableControlAction(0, 140, true)
-    DisableControlAction(0, 250, true)
-    DisableControlAction(0, 263, true)
-    DisableControlAction(0, 114, true)
-    DisableControlAction(0, 257, true)
-    DisableControlAction(0, 331, true)
-    DisableControlAction(0, 68, true)
-    DisableControlAction(0, 257, true)
-    DisableControlAction(0, 263, true)
-    DisableControlAction(0, 264, true)
-    if IsDisabledControlJustPressed(2, 37) then
-        SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
-    end
-    if IsDisabledControlJustPressed(0, 106) then 
-        SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
-    end
+	DisablePlayerFiring(player,true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
+	DisablePlayerFiring(player,true)  -- Disables firing all together
+	DisableControlAction(0, 140, true) -- R
+	DisableControlAction(0, 25, true) -- RIGHT MOUSE BUTTON Aim
 end
 
 function antiCollision()
