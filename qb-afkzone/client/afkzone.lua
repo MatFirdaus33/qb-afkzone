@@ -1,3 +1,5 @@
+print("MatFirdaus^7-^2AFKZONE ^7v^41^1.^41^1.^40 ^7- ^2 Script by MatFirdaus^7")
+
 local QBCore = exports['qb-core']:GetCoreObject()
 RegisterNetEvent('QBCore:Client:UpdateObject', function()
     QBCore = exports['qb-core']:GetCoreObject()
