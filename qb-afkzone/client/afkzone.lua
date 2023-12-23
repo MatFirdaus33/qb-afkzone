@@ -76,7 +76,7 @@ function DisableViolentActions()
 	NetworkSetFriendlyFireOption(false)
     SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
     DisablePlayerFiring(ped, true)
-	DisablePlayerFiring(player,true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
+    DisablePlayerFiring(player,true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
     SetPlayerCanDoDriveBy(ped, false)
     DisableControlAction(2, 37, true)
     DisableControlAction(0, 106, true)
