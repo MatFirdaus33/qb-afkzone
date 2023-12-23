@@ -133,3 +133,13 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+Citizen.CreateThread(function()
+    while true do
+		Wait(0)
+		if lokasi.tempat then
+			invisible = true
+			SetEntityAlpha(PlayerPedId(), 200, false)
+		end
+	end
+end)
