@@ -5,7 +5,7 @@ if feel free u can pull requests to improve my code I really appreciate it
 idle afkzone when not enter afk zone resmon - 2.00ms 
 ![image](https://github.com/MatFirdaus33/qb-afkzone/assets/113304580/451b1fdb-2bbe-451f-abaf-e8eba9bb8914)
 
-enter afkzone resmon - 13.0ms 14.0ms
+enter afkzone resmon - 0.11ms 0.14ms
 ![image](https://github.com/MatFirdaus33/qb-afkzone/assets/113304580/2cd6246e-a9c3-4b8e-aad1-87040d3360ea)
 
 // place original //
