@@ -48,7 +48,6 @@ Citizen.CreateThread(function()
 				if(Vdist(x,y,z,v.x,v.y,v.z) <= v.radius) then
 					lokasi.tempat = true
 					lokasi.x,lokasi.y,lokasi.z,lokasi.radius = v.x,v.y,v.z,v.radius
-					--ClearPlayerWantedLevel(PlayerId())
 					exports["Venice-Notification"]:Notify("Anda Masuk Zone", 5000, "check")
 					--exports['mythic_notify']:SendAlert('inform', 'Anda Masuk Zone Tidur')
 				end
@@ -73,9 +72,9 @@ end)
 
 function DisableViolentActions()
 	NetworkSetFriendlyFireOption(false)
-    SetEntityCanBeDamaged(vehicle, false)
     SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
     DisablePlayerFiring(ped, true)
+	DisablePlayerFiring(player,true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
     SetPlayerCanDoDriveBy(ped, false)
     DisableControlAction(2, 37, true)
     DisableControlAction(0, 106, true)
@@ -129,8 +128,8 @@ Citizen.CreateThread(function()
     while true do
 		Wait(120000)
 		if lokasi.tempat then
-			TriggerServerEvent('consumables:server:addHunger', 30000)
-			TriggerServerEvent('consumables:server:addThirst', 30000)
+			TriggerServerEvent('consumables:server:addHunger', 10000)
+			TriggerServerEvent('consumables:server:addThirst', 10000)
 		end
 	end
 end)
