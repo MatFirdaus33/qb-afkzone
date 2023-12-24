@@ -1,4 +1,4 @@
-print("^7^2QB-AFKZONE ^7")
+print("^7^2QB-AFKZONE ^7v^41^1.^41^1.^40 ^7")
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
