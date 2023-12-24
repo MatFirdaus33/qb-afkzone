@@ -1,9 +1,6 @@
 print("^7^2QB-AFKZONE ^7v^41^1.^41^1.^40 ^7- ^2 Script by MatFirdaus^7")
 
-
-RegisterNetEvent('QBCore:Client:UpdateObject', function()
-    QBCore = exports['qb-core']:GetCoreObject()
-end)
+local QBCore = exports['qb-core']:GetCoreObject()
 
 Config = {}
 
