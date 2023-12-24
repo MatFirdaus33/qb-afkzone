@@ -8,6 +8,8 @@ idle afkzone when not enter afk zone resmon - 0.02ms
 
 // place original //
 ![image](https://github.com/MatFirdaus33/qb-afkzone/assets/113304580/95061c96-2d52-4057-9575-27872bf87ae2)
+![image](https://github.com/MatFirdaus33/qb-afkzone/assets/113304580/c424e53c-c6d5-4cbf-b91d-dae774b387f5)
+
 
 
 
