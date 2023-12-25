@@ -1,4 +1,4 @@
-print("^7^2QB-AFKZONE ^7v^41^1.^41^1.^40 ^7")
+print("^7^2QB-AFKZONE ^7v^41^1.^41^2.^40 ^7- ^2MatFirdaus^7")
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
@@ -7,11 +7,11 @@ Config = {}
 
 local besarradius = 60
 local blips = {
-	{title="AFK Zone Tasik", colour=2, id=269, x = 1084.19, y = -694.17, z = 58.01, radius = besarradius+0.0}
+	{title="AFK Zone Tasik", colour=2, id=269, x =  4988.7578, y = -5880.8755, z =  20.9378, radius = besarradius+0.0}  
 }
 
 local zone = {
-	["tasik"] = {x = 1084.19, y = -694.17, z = 58.01, radius = besarradius}
+	["tasik"] = {x = 4988.7578, y = -5880.8755, z = 20.9378, radius = besarradius}
 }
 
 Citizen.CreateThread(function()
@@ -47,7 +47,7 @@ Citizen.CreateThread(function()
 				if(Vdist(x,y,z,v.x,v.y,v.z) <= v.radius) then
 					lokasi.tempat = true
 					lokasi.x,lokasi.y,lokasi.z,lokasi.radius = v.x,v.y,v.z,v.radius
-					exports["Venice-Notification"]:Notify("Anda Masuk Zone", 5000, "check")
+					exports["Venice-Notification"]:Notify("Anda Masuk Afkzone", 5000, "check")
 					--exports['mythic_notify']:SendAlert('inform', 'Anda Masuk Zone Tidur')
 				end
 			end
@@ -62,7 +62,7 @@ Citizen.CreateThread(function()
 			if(Vdist(x,y,z,lokasi.x,lokasi.y,lokasi.z) > besarradius) then
 				lokasi.tempat = false
 				lokasi.x,lokasi.y,lokasi.z,lokasi.radius = nil,nil,nil,nil
-				exports["Venice-Notification"]:Notify("Anda Keluar Zone Tidur", 5000, "info")
+				exports["Venice-Notification"]:Notify("Anda Keluar Afkzone", 5000, "info")
 				--exports['mythic_notify']:SendAlert('inform', 'Anda keluar Zone Tidur')
 			end
 		end
@@ -102,10 +102,10 @@ end
 
 Citizen.CreateThread(function()
     while true do
-		Wait(120000)
+		Wait(150000)
 		if lokasi.tempat then
-			TriggerServerEvent('consumables:server:addHunger', 10000)
-			TriggerServerEvent('consumables:server:addThirst', 10000)
+			TriggerServerEvent('consumables:server:addHunger', 5000)
+			TriggerServerEvent('consumables:server:addThirst', 5000)
 		end
 	end
 end)
@@ -116,6 +116,7 @@ Citizen.CreateThread(function()
 		if lokasi.tempat then
 			invisible = true
 			SetEntityAlpha(PlayerPedId(), 200, false)
+			SetLocalPlayerAsGhost(true)
 		end
 	end
 end)
