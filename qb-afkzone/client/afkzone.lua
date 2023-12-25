@@ -5,13 +5,13 @@ local QBCore = exports['qb-core']:GetCoreObject()
 Config = {}
 
 
-local besarradius = 60
+local besarradius = 60   
 local blips = {
-	{title="AFK Zone Tasik", colour=2, id=269, x =  4988.7578, y = -5880.8755, z =  20.9378, radius = besarradius+0.0}  
+	{title="AFK Zone Tasik", colour=2, id=269, x =  1080.1115, y = -700.3678, z =  58.1942, radius = besarradius+0.0}  
 }
 
 local zone = {
-	["tasik"] = {x = 4988.7578, y = -5880.8755, z = 20.9378, radius = besarradius}
+	["tasik"] = {x =  1080.1115, y = -700.3678, z =  58.1942, radius = besarradius}
 }
 
 Citizen.CreateThread(function()
