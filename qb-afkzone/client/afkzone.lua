@@ -1,17 +1,18 @@
-print("^7^2QB-AFKZONE ^7v^41^1.^41^2.^40 ^7- ^2MatFirdaus^7")
+print("^7^2QB-AFKZONE ^7v^41^1.^41^3.^40 ^7- ^2MatFirdaus^7")
 
 local QBCore = exports['qb-core']:GetCoreObject()
+
 
 Config = {}
 
 
-local besarradius = 60   
+local besarradius = 60  ---radius 
 local blips = {
-	{title="AFK Zone Tasik", colour=2, id=269, x =  1080.1115, y = -700.3678, z =  58.1942, radius = besarradius+0.0}  
+	{title="AFK Zone Tasik", colour=2, id=269, x =  4988.7578, y = -5880.8755, z =  20.9378, radius = besarradius+0.0}  
 }
 
 local zone = {
-	["tasik"] = {x =  1080.1115, y = -700.3678, z =  58.1942, radius = besarradius}
+	["tasik"] = {x = 4988.7578, y = -5880.8755, z = 20.9378, radius = besarradius}
 }
 
 Citizen.CreateThread(function()
@@ -54,7 +55,6 @@ Citizen.CreateThread(function()
 		end
 		if lokasi.tempat then
 			CurrentAction = nil
-			antiCollision()
 			DisableViolentActions()
 			DrawTxt(1.150, 1.460, 1.0,1.0,0.50,"~r~AFK~r~ ~r~ZONE~r~", 255,255,255,255)
 			
@@ -78,15 +78,6 @@ function DisableViolentActions()
 	DisableControlAction(0, 25, true) -- RIGHT MOUSE BUTTON Aim
 end
 
-function antiCollision()
-	local playerPed = PlayerPedId()
-	for _, i in ipairs(GetActivePlayers()) do
-		local otherPlayerPed = PlayerPedId(i)
-		SetEntityNoCollisionEntity(playerPed, otherPlayerPed, true)
-		SetEntityNoCollisionEntity(otherPlayerPed, playerPed, true)
-    end
-end
-
 function DrawTxt(x,y ,width,height,scale, text, r,g,b,a)
     SetTextFont(6)
     SetTextProportional(0)
@@ -104,8 +95,8 @@ Citizen.CreateThread(function()
     while true do
 		Wait(150000)
 		if lokasi.tempat then
-			TriggerServerEvent('consumables:server:addHunger', 5000)
-			TriggerServerEvent('consumables:server:addThirst', 5000)
+			TriggerServerEvent('consumables:server:addHunger', 5000)  
+			TriggerServerEvent('consumables:server:addThirst', 5000)  
 		end
 	end
 end)
