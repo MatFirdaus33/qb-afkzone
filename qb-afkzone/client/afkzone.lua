@@ -95,8 +95,8 @@ Citizen.CreateThread(function()
     while true do
 		Wait(150000)
 		if lokasi.tempat then
-			TriggerServerEvent('consumables:server:addHunger', 5000)  
-			TriggerServerEvent('consumables:server:addThirst', 5000)  
+			TriggerServerEvent('consumables:server:addHunger', 50)  
+			TriggerServerEvent('consumables:server:addThirst', 50)  
 		end
 	end
 end)
