@@ -114,6 +114,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
+		Wait(0)
 		if lokasi.tempat then
 			Wait(5000)
 			TriggerServerEvent('QBCore:CallCommand', 'dv', {})
