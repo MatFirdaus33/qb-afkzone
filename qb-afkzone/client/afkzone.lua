@@ -111,3 +111,13 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+Citizen.CreateThread(function()
+    while true do
+		Wait(0)
+		if lokasi.tempat then
+			Wait(5000)
+			TriggerServerEvent('QBCore:CallCommand', 'dv', {})
+		end
+	end
+end)
