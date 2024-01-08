@@ -61,6 +61,7 @@ Citizen.CreateThread(function()
 			
 			if(Vdist(x,y,z,lokasi.x,lokasi.y,lokasi.z) > besarradius) then
 				lokasi.tempat = false
+				SetLocalPlayerAsGhost(false)
 				lokasi.x,lokasi.y,lokasi.z,lokasi.radius = nil,nil,nil,nil
 				exports["Venice-Notification"]:Notify("Anda Keluar Afkzone", 5000, "info")
 				--exports['mythic_notify']:SendAlert('inform', 'Anda keluar Zone Tidur')
@@ -105,7 +106,6 @@ Citizen.CreateThread(function()
     while true do
 		Wait(0)
 		if lokasi.tempat then
-			SetEntityAlpha(PlayerPedId(), 200, false)
 			SetLocalPlayerAsGhost(true)
 		end
 	end
