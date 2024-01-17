@@ -72,9 +72,8 @@ end)
 
 function DisableViolentActions()
 	NetworkSetFriendlyFireOption(false)
-    DisablePlayerFiring(ped, true)
+        DisablePlayerFiring(ped, true)
 	DisablePlayerFiring(player,true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
-	DisablePlayerFiring(player,true)  -- Disables firing all together
 	DisableControlAction(0, 140, true) -- R
 	DisableControlAction(0, 25, true) -- RIGHT MOUSE BUTTON Aim
 end
